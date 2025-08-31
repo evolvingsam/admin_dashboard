@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  /* grid-template-rows: auto 1fr auto;  */
+  height: 100vh;
+}
+
+.sidebar {
+  grid-row: 1 / 5;
+  display: grid;
+  background-color: #5988ce;
+  color: white;
+  /* grid-template-rows: 2fr / 2fr; */
+}
+
+.dashboard {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.dashboard-icon {
+  width: 40px;
+}
+.home {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.home-icon {
+  width: 40px;
+  color: white;
+}
+
+.profile {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.profile-icon {
+  width: 40px;
+}
+.messages {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.messages-icon {
+  width: 40px;
+}
+.history {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.history-icon {
+  width: 40px;
+}
+
+.tasks {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.tasks-icon {
+  width: 40px;
+}
+
+.communities {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.communities-icon {
+  width: 40px;
+}
+.settings {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.settings-icon {
+  width: 40px;
+}
+
+.support {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.support-icon {
+  width: 40px;
+}
+.privacy {
+  display: flex;
+  background-color: #4a76b8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.privacy-icon {
+  width: 40px;
+}
+.nav {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin-top: 50px;
+}
+.header {
+  display: grid;
+  grid-column: 2 / 5;
+  grid-row: 1 / 2;
+  background-color: #6c92b7;
+  color: white;
+  padding: 10px 20px;
+  grid-template-rows: 2 / 2;
+}
+
+.header .search {
+  display: flex;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.header .notification {
+  display: flex;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  text-align: right;
+}
+
+.header .greeting {
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  text-align: right;
+}
+
+.header .options {
+  display: flex;
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  text-align: right;
+}
+.main {
+  display: grid;
+  padding: 20px;
+  background-color: #b0c7e7;
+}
+
+.main .projects {
+  grid-column: 1 / 3;
+    
+}
+
+.main .at {
+  display: grid;
+  grid-column: 3 / 4;
+  gap: 20px;
+    
+}
