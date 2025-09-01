@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red; 
+  outline: 1px solid red;
 }
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #d9e3f0;
 }
 
 .container {
@@ -18,7 +19,9 @@ body {
 
 .sidebar {
   grid-row: 1 / 5;
-  display: grid;
+  /* width: 4x; */
+  display: flex;
+  flex-direction: column;
   background-color: #5988ce;
   color: white;
   /* grid-template-rows: 2fr / 2fr; */
@@ -26,150 +29,160 @@ body {
 
 .dashboard {
   display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
+  gap: 10px;
+  height: 50px;
+  
+  justify-content: flex-start;
+  align-items: center;
+}
+.dashboard-icon {
+
 }
 
-.dashboard-icon {
-  width: 40px;
+
+svg {
+  width: 15px;
+  height: 20px;
 }
-.home {
+
+.dashboard-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  align-self: center;
+}
+.group {
   display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 5px 20px;
 }
-.home-icon {
-  width: 40px;
+.icon {
+  width: 30px;
   color: white;
 }
-
-.profile {
+.dbody {
   display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.profile-icon {
-  width: 40px;
-}
-.messages {
-  display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.messages-icon {
-  width: 40px;
-}
-.history {
-  display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.history-icon {
-  width: 40px;
-}
-
-.tasks {
-  display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.tasks-icon {
-  width: 40px;
-}
-
-.communities {
-  display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.communities-icon {
-  width: 40px;
-}
-.settings {
-  display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.settings-icon {
-  width: 40px;
-}
-
-.support {
-  display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.support-icon {
-  width: 40px;
-}
-.privacy {
-  display: flex;
-  background-color: #4a76b8;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-.privacy-icon {
-  width: 40px;
+  flex-direction: column;
+  gap: 15px;
 }
 .nav {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  /* height: 100px; */
 }
 .header {
   display: grid;
   grid-column: 2 / 5;
   grid-row: 1 / 2;
-  background-color: #6c92b7;
-  color: white;
+  background: #fcfdff;
+  color: rgb(25, 24, 24);
   padding: 10px 20px;
   grid-template-rows: 2 / 2;
+  gap: 30px;
+  box-shadow: 0px 5px 5px #b9c1cb;
 }
 
 .header .search {
   display: flex;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.search >
+  #search {
+  border-radius: 20px;
+  width: 100%;
+  height: 20px;
+  border: none;
+  background: #d9e3f0;
+  align-self: center;
 }
 
 .header .notification {
   display: flex;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  text-align: right;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+
+}
+
+.header > .notification > .name {
+  font-weight: bold;
+  font-size: 10px;
 }
 
 .header .greeting {
-  display: flex;
+  display: grid;
   grid-column: 1 / 2;
   grid-row: 2 / 4;
-  text-align: right;
+  /* gap: 8px ; */
+  
+}
+.greeting > .logo {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+.greeting > .hi {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-weight: bold;
+  font-size: 10px;
+}
+.greeting > .name {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  font-weight: bold;
+  font-size: 12px;
+
 }
 
-.header .options {
+.header > .options {
   display: flex;
   grid-column: 2 / 4;
   grid-row: 2 / 4;
-  text-align: right;
+  justify-self:right;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
+.option {
+  width: 60px;
+  /* height: 20px; */
+  border-radius: 15px;
+  background: #5988ce;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  outline: none;
+  
+}
+
 .main {
   display: grid;
   padding: 20px;
-  background-color: #b0c7e7;
+  gap: 10px;
 }
 
 .main .projects {
-  grid-column: 1 / 3;
-    
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.main > .projects > .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  /* outline: 1px solid red; */
 }
 
 .main .at {
@@ -177,4 +190,9 @@ body {
   grid-column: 3 / 4;
   gap: 20px;
     
+}
+
+.project,
+.cb {
+  background: #fcfdff;
 }
